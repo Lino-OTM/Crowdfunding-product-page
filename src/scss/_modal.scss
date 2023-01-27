@@ -1,0 +1,248 @@
+.modal-container {
+  display: none;
+  position: absolute;
+  top: 12rem;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 0.9rem;
+  width: 87%;
+  margin-inline: auto;
+  padding: 3.2rem 2.5rem 0.6rem;
+  background-color: #fff;
+  z-index: 200;
+
+  &__top-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__close-btn {
+    margin-top: 0.5rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: transparent;
+    border: none;
+
+    :hover path {
+      opacity: 1;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-bottom: 2.6rem;
+  }
+
+  &__text {
+    font-size: 1.395rem;
+    line-height: 2.3rem;
+    margin-bottom: 2.6rem;
+  }
+
+  &__option-card {
+    outline: 2px solid #ededed;
+    border-radius: 0.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+
+    &-main-content-wrapper {
+      padding: 3.1rem 2.25rem 2.8rem;
+    }
+
+    &:nth-of-type(3) &-main-content-wrapper {
+      padding-block: 1.9rem;
+      padding-bottom: 2.5rem;
+    }
+    &:nth-of-type(4) &-main-content-wrapper {
+      padding-block: 2rem;
+      padding-bottom: 2.9rem;
+    }
+    &:nth-of-type(5) &-main-content-wrapper {
+      padding-block: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    &:nth-of-type(2) &-description {
+      margin-top: 3.2rem;
+    }
+    &:nth-of-type(3) &-description {
+      margin-top: 2.1rem;
+      margin-bottom: 2.35rem;
+    }
+    &:nth-of-type(4) &-description {
+      margin-top: 2.1rem;
+      margin-bottom: 2.1rem;
+    }
+    &:nth-of-type(5) &-description {
+      margin-top: 1.9rem;
+      margin-bottom: 2.2rem;
+    }
+
+    //Checkbox and title
+    &-top-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1.49rem;
+    }
+
+    // label
+    &-radio-wrapper {
+      position: relative;
+      border: 1px solid #ededed;
+      border-radius: 50%;
+      width: 2.45rem;
+      height: 2.45rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    // input
+    &-radio-input {
+      display: none;
+
+      &:checked ~ .modal-container__option-card-radio {
+        display: block;
+      }
+    }
+
+    // span
+    &-radio {
+      position: absolute;
+      display: none;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background-color: hsl(176, 50%, 47%);
+      left: 0.5rem;
+      top: 0.5rem;
+    }
+
+    &-title {
+      font-size: 1.41rem;
+      line-height: 2.48rem;
+
+      &:hover {
+        color: $moderateCyan;
+        cursor: pointer;
+      }
+    }
+
+    &-pledge {
+      color: $moderateCyan;
+      font-size: 1.39rem;
+    }
+
+    &-description {
+      font-size: 1.415rem;
+      color: $darkGray;
+      line-height: 2.37rem;
+    }
+
+    &-amount {
+      font-size: 1.8rem;
+      font-weight: $fontBold;
+    }
+
+    &-amount-left {
+      margin-left: 0.9rem;
+      font-weight: $fontLight;
+      font-size: 1.5rem;
+      color: $darkGray;
+    }
+
+    &--disabled {
+      position: relative;
+
+      &::before {
+        z-index: 250;
+        content: "";
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.478);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &-btns-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &::before {
+        content: "$";
+        font-weight: $fontBold;
+        color: #b2b2b2;
+        position: absolute;
+        padding: 1rem;
+        font-size: 1.4rem;
+        top: .4rem;
+        left: 1.4rem;
+      }
+    }
+
+    // Pledge section
+    &-pledge-section {
+      display: none;
+      position: relative;
+      flex-direction: column;
+      border-top: 1px solid rgba(0, 0, 0, 0.162);
+      padding: 3rem 2.2rem 2.1rem;
+    }
+
+    &-pledge-text {
+      font-size: 1.41rem;
+      text-align: center;
+      margin-bottom: 2.1rem;
+      color: $darkGray;
+    }
+
+    &-pledge-input {
+      border-radius: 3rem;
+      border: 1px solid #ededed;
+      padding: 1.5rem 4rem;
+      padding-right: 1rem;
+      font-weight: $fontBold;
+      width: 43.5%;
+      outline: none;
+
+      &::-webkit-inner-spin-button,
+      .hide-controls::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &:hover,
+      &:focus {
+        border: 1px solid $darkCyan;
+        cursor: pointer;
+      }
+    }
+
+    &-pledge-btn {
+      background-color: $moderateCyan;
+      color: #fff;
+      font-weight: $fontBold;
+      padding: 1.65rem 2.8rem;
+      font-size: 1.35rem;
+      border: none;
+      border-radius: 3rem;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $darkCyan;
+        cursor: pointer;
+      }
+    }
+  }
+}

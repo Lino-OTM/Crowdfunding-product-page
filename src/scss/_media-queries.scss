@@ -1,0 +1,318 @@
+@import "./variables";
+
+.hero {
+  background-image: url("../assets/images/image-hero-desktop.jpg");
+  height: 40.2rem;
+  padding: 4.7rem 16.6rem;
+
+  &__menu {
+    display: none;
+  }
+
+  &__menu-items {
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
+    position: static;
+    background-color: transparent;
+    width: max-content;
+    gap: 3.3rem;
+    box-shadow: none;
+  }
+
+  &__menu-item {
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+    a {
+      color: #fff;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// First container Web Styles
+
+.top-container {
+  width: 100%;
+  max-width: 72.7rem;
+  margin-top: -11.8rem;
+  padding: 5.5rem 4.8rem 4.7rem;
+  margin-bottom: 2.4rem;
+
+  &__title {
+    font-size: 2.8rem;
+    margin-bottom: 1.4rem;
+    max-width: max-content;
+  }
+
+  &__text {
+    margin-bottom: 3.6rem;
+    font-size: 1.615rem;
+  }
+
+  &__project-btn {
+    padding-inline: 4rem;
+  }
+
+  &__bookmark-btn {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-right: 2rem;
+    border-radius: 3rem;
+    background-color: #f4f8f9;
+  }
+
+  &__bookmark-text {
+    display: inline;
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    font-weight: $fontBold;
+    color: #777777;
+  }
+}
+
+// Second container Web Styles
+
+.goal-container {
+  max-width: 72.8rem;
+  padding: 4.8rem 3.2rem;
+
+  &__main-data-wrapper {
+    display: flex;
+    margin-bottom: 3.7rem;
+  }
+
+  &__data-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & &__data-wrapper:nth-of-type(2) {
+    border-inline: 1px solid #ededed;
+    padding-left: 3.9rem;
+    padding-right: 8.6rem;
+    margin-left: 4.2rem;
+    margin-right: 3rem;
+  }
+
+  hr {
+    display: none;
+  }
+
+  &__amount,
+  &__backers,
+  &__days {
+    margin-bottom: 0.7rem;
+  }
+
+  &__total-amount,
+  &__total-backers,
+  &__days-left {
+    margin-left: 1.3rem;
+    margin-bottom: 0;
+    font-size: 1.53rem;
+  }
+
+  &__progress-bar {
+    margin-left: 1.4rem;
+    max-width: 63.4rem;
+  }
+}
+
+// Third container Web Styles
+.options-container {
+  max-width: 72.7rem;
+  padding: 4.9rem 4.8rem;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 3.75rem;
+  }
+
+  &__information {
+    font-size: 1.605rem;
+    line-height: 2.95rem;
+    margin-bottom: 4.1rem;
+  }
+
+  &__option-card {
+    padding: 3.8rem 3.3rem 2.8rem;
+    padding-right: 2.9rem;
+    margin-bottom: 2.6rem;
+    &-title {
+      font-size: 1.7rem;
+    }
+
+    &-title {
+      font-size: 1.8rem;
+    }
+
+    &-pledge {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    &-top-info-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.6rem;
+    }
+
+    &-btns-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-description {
+      font-size: 1.605rem;
+      line-height: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &-amount {
+      margin-bottom: 0;
+    }
+
+    &-btn {
+      align-self: flex-start;
+    }
+  }
+}
+
+// Modal Web Styles
+
+.modal-container {
+  max-width: 73rem;
+  // left: 24.7%;
+  padding: 2.9rem 4.9rem;
+  padding-right: 3.3rem;
+
+  &__title {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 1.605rem;
+    margin-bottom: 3.6rem;
+  }
+
+  &__option-card {
+    width: 97.6%;
+
+    &-main-content-wrapper {
+      padding: 3.4rem 2.8rem;
+      padding-right: 2.3rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &:nth-of-type(3) &-main-content-wrapper {
+      padding-block: 3.2rem;
+      padding-bottom: 2.5rem;
+    }
+    &:nth-of-type(4) &-main-content-wrapper {
+      padding-block: 3.1rem;
+      padding-bottom: 2.9rem;
+    }
+    &:nth-of-type(5) &-main-content-wrapper {
+      padding-block: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    &-top-wrapper {
+      gap: 2.2rem;
+    }
+
+    &-title {
+      font-size: 1.63rem;
+      margin-top: -0.4rem;
+      font-weight: $fontBold;
+
+      & br {
+        display: none;
+      }
+    }
+
+    &-pledge {
+      font-size: 1.61rem;
+      margin-left: 1.3rem;
+    }
+
+    &-description {
+      font-size: 1.515rem;
+      line-height: 2.8rem;
+      margin-top: 0;
+      margin-left: 4.7rem;
+    }
+
+    &:nth-of-type(2) &-description {
+      margin-top: 1.3rem;
+    }
+    &:nth-of-type(3) &-description {
+      margin-top: 1.15rem;
+      margin-bottom: 0;
+    }
+    &:nth-of-type(4) &-description {
+      margin-top: 1.1rem;
+      margin-bottom: 0;
+    }
+    &:nth-of-type(5) &-description {
+      margin-top: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    &-amount {
+      position: absolute;
+      right: 2.7rem;
+      top: 2.8rem;
+    }
+
+    &-pledge-section {
+      display: none;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 2.65rem;
+    }
+
+    &-pledge-text {
+      font-size: 1.51rem;
+      margin-top: 1.3rem;
+    }
+
+    &-btns-wrapper {
+      justify-content: flex-end;
+
+      &::before {
+        left: 3rem;
+        top: 0.5rem;
+      }
+    }
+
+    &-pledge-input {
+      max-width: 11.6rem;
+      margin-right: 0.9rem;
+    }
+  }
+}
+
+// Success Modal Web Styles
+.success-modal {
+  max-width: 54rem;
+  padding-inline: 5rem;
+
+  &__title {
+    font-size: 2.4rem;
+    margin-bottom: 1.9rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 2.85rem;
+  }
+}
